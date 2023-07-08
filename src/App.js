@@ -1,16 +1,14 @@
 import './App.css';
-import ButtonComponent from "./components/ButtonComponent/ButtonComponent"
-import Saludo from "./components/Saludo/Saludo";
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <Saludo />
-      <ButtonComponent label="Boton 1" />
-      <ButtonComponent label="Otro boton." />
-      <ButtonComponent />
+      <NavBar />
+      <ItemListContainer greeting="Bienvenidos a la Tienda!" />
     </div>
-  );
+  )
 }
 
 export default App;
