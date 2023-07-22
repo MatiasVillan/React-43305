@@ -10,6 +10,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={ <ItemListContainer /> } />
+          <Route path="*" element={<h1>Error 404, Página no encontrada.</h1>} />
         </Routes>
       </BrowserRouter>
     </div>

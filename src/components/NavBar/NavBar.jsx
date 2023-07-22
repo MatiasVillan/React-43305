@@ -6,11 +6,12 @@ const NavBar = () => {
     return (
         <nav>
             <ul>
-                <li><Link to="/">Principal</Link></li>
+                <li id="navbar-brand"><Link to="/">BLACKDISCO</Link></li>
+                <li><Link to="/">Discos</Link></li>
                 <li><Link to="/products">Productos</Link></li>
                 <li><Link to="#">Nosotros</Link></li>
                 <li><Link to="#">Contacto</Link></li>
-                <li><CartWidget /></li>
+                <li><Link to="/cart"><CartWidget /></Link></li>
             </ul>
         </nav>
     );

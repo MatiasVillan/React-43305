@@ -7,6 +7,8 @@ const products = [
         artist: 'Michael Jackson',
         genre: 'Pop',
         stock: 5,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 2,
@@ -14,6 +16,8 @@ const products = [
         artist: 'AC/DC',
         genre: 'Rock',
         stock: 10,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 3,
@@ -21,6 +25,8 @@ const products = [
         artist: 'Pink Floyd',
         genre: 'Progressive Rock',
         stock: 5,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 4,
@@ -28,6 +34,8 @@ const products = [
         artist: 'Various Artists',
         genre: 'Soundtrack',
         stock: 3,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 5,
@@ -35,6 +43,8 @@ const products = [
         artist: 'Meat Loaf',
         genre: 'Rock',
         stock: 10,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 6,
@@ -42,6 +52,8 @@ const products = [
         artist: 'Amy Winehouse',
         genre: 'Soul',
         stock: 8,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 7,
@@ -49,6 +61,8 @@ const products = [
         artist: 'Fleetwood Mac',
         genre: 'Rock',
         stock: 4,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 8,
@@ -56,6 +70,8 @@ const products = [
         artist: 'Various Artists',
         genre: 'Disco',
         stock: 7,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 9,
@@ -63,6 +79,8 @@ const products = [
         artist: 'Shania Twain',
         genre: 'Country',
         stock: 14,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 10,
@@ -70,6 +88,8 @@ const products = [
         artist: 'Pink Floyd',
         genre: 'Progressive Rock',
         stock:  11,
+        price: 1000,
+        img: './assets/img/disco.png',
     },
     {
         id: 11,
@@ -77,6 +97,8 @@ const products = [
         artist: 'Eagles',
         genre: 'Rock',
         stock: 1,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 12,
@@ -84,6 +106,8 @@ const products = [
         artist: 'Norah Jones',
         genre: 'Jazz',
         stock: 20,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 13,
@@ -91,6 +115,8 @@ const products = [
         artist: 'Adele',
         genre: 'Pop',
         stock: 13,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 14,
@@ -98,6 +124,8 @@ const products = [
         artist: 'Guns N\' Roses',
         genre: 'Rock',
         stock: 2,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 15,
@@ -105,6 +133,8 @@ const products = [
         artist: 'Eminem',
         genre: 'Hip Hop',
         stock: 5,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 16,
@@ -112,6 +142,8 @@ const products = [
         artist: 'Led Zeppelin',
         genre: 'Rock',
         stock: 16,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 17,
@@ -119,6 +151,8 @@ const products = [
         artist: 'Shania Twain',
         genre: 'Country',
         stock: 12,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 18,
@@ -126,6 +160,8 @@ const products = [
         artist: 'U2',
         genre: 'Rock',
         stock: 20,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 19,
@@ -133,6 +169,8 @@ const products = [
         artist: 'The Beatles',
         genre: 'Rock',
         stock: 1,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
     {
         id: 20,
@@ -140,6 +178,8 @@ const products = [
         artist: 'Guns N\' Roses',
         genre: 'Rock',
         stock: 5,
+        price: 1500,
+        img: './assets/img/disco.png',
     },
 ];
 
