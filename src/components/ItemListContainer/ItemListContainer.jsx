@@ -1,9 +1,12 @@
+import { useState, useEffect } from 'react';
 import './ItemListContainer.css'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
+    const { products, setProducts } = useState([]);
+
     return (
         <div className='item-list-container'>
-            <h2>{props.greeting}</h2>
+            <h2>HOLA</h2>
         </div>
     );
 }
