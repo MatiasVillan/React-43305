@@ -192,8 +192,7 @@ const getData = () => {
 export const getItemDetails = (itemUrl) => {
     return new Promise((resolve, reject) => { 
         const itemDetails = products.find((item) => item.id === parseInt(itemUrl));
-        setTimeout(() => {resolve(itemDetails);
-        console.log(itemDetails)}, 800);
+        setTimeout(() => resolve(itemDetails), 800);
     });
 }
 

@@ -20,3 +20,12 @@ nav a {
     font-weight: bold;
     margin-right: auto; /* Add this line to push "DISCO" to the left side */
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f292;
+    padding: 4px 0;
+    z-index: 100;
+  }
+  
