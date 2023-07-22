@@ -3,18 +3,19 @@ import './Card.css';
 
 const Card = (props) => {
     const { id, title, artist, genre, stock, price, img } = props;
-    const link = `/product/${id}`
+    const linkId = `/product/${id}`
+    const linkGenre = `/genre/${genre}`
 
     return (
         <div className='item-card'>
             <div className="item-card_img">
-                <Link to={link}><img src={img} alt="Tapa del disco"></img></Link>
+                <Link to={linkId}><img src={img} alt="Tapa del disco"></img></Link>
             </div>            
             <div className="item-card_header">
-            <Link to={link}><h2>{title} - {artist}</h2></Link>
+                <Link to={linkId}><h2>{title} - {artist}</h2></Link>
             </div>
             <div className="item-card_detail">
-                <small>{genre}</small>
+                <Link to={linkGenre}><h3>{genre}</h3></Link>
                 <h4>$ {price}</h4>
             </div>
         </div>

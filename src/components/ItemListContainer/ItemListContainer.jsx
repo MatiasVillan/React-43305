@@ -1,18 +1,22 @@
 import { useState, useEffect } from 'react';
-import getData from '../../services/MockService'
+import getData, { getGenreList } from '../../services/MockService'
 import ItemList from './ItemList';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
-    const [ products, setProducts ] = useState([]);
+    const [ discs, setDiscs ] = useState([]);
+    const { genreId } = useParams();
 
-    const populateList = async () => {
-        const productList = await getData();
-        setProducts(productList);
-    };
+    const setList = async () => {
+        let discList = genreId
+        ? await getGenreList(genreId)
+        : await getData();
+        setDiscs(discList);
+    }
 
-    useEffect( () => { populateList(); }, [] );
+    useEffect( () => { setList(); }, [genreId] );
 
-    return ItemList(products);
+    return ItemList(discs);
 }
   
 export default ItemListContainer;

@@ -23,7 +23,7 @@ const products = [
         id: 3,
         title: 'The Dark Side of the Moon',
         artist: 'Pink Floyd',
-        genre: 'Progressive Rock',
+        genre: 'Progressive',
         stock: 5,
         price: 1000,
         img: '/assets/img/disco.png',
@@ -86,7 +86,7 @@ const products = [
         id: 10,
         title: 'The Wall',
         artist: 'Pink Floyd',
-        genre: 'Progressive Rock',
+        genre: 'Progressive',
         stock:  11,
         price: 1000,
         img: '/assets/img/disco.png',
@@ -193,6 +193,16 @@ export const getItemDetails = (itemUrl) => {
     return new Promise((resolve, reject) => { 
         const itemDetails = products.find((item) => item.id === parseInt(itemUrl));
         setTimeout(() => resolve(itemDetails), 800);
+    });
+}
+
+export const getGenreList = (genreUrl) => {
+    return new Promise((resolve, reject) => {
+        const genreList = products.filter((item) => {
+            console.log(item.genre.toLowerCase(), genreUrl.toLowerCase());
+            return item.genre.toLowerCase() === genreUrl.toLowerCase()
+        });
+        setTimeout(() => resolve(genreList) , 1200);
     });
 }
 

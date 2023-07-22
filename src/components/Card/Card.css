@@ -34,8 +34,9 @@
     object-fit: cover;
   }
   
-  .item-card_price{
+  .item-card_detail{
     font-weight: bold;
+    font-size: 2rem;
   }
 
   Link, a {
