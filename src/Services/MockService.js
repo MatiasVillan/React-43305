@@ -8,7 +8,7 @@ const products = [
         genre: 'Pop',
         stock: 5,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const products = [
         genre: 'Rock',
         stock: 10,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const products = [
         genre: 'Progressive Rock',
         stock: 5,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ const products = [
         genre: 'Soundtrack',
         stock: 3,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ const products = [
         genre: 'Rock',
         stock: 10,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ const products = [
         genre: 'Soul',
         stock: 8,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 7,
@@ -62,7 +62,7 @@ const products = [
         genre: 'Rock',
         stock: 4,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 8,
@@ -71,7 +71,7 @@ const products = [
         genre: 'Disco',
         stock: 7,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 9,
@@ -80,7 +80,7 @@ const products = [
         genre: 'Country',
         stock: 14,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 10,
@@ -89,7 +89,7 @@ const products = [
         genre: 'Progressive Rock',
         stock:  11,
         price: 1000,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 11,
@@ -98,7 +98,7 @@ const products = [
         genre: 'Rock',
         stock: 1,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 12,
@@ -107,7 +107,7 @@ const products = [
         genre: 'Jazz',
         stock: 20,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 13,
@@ -116,7 +116,7 @@ const products = [
         genre: 'Pop',
         stock: 13,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 14,
@@ -125,7 +125,7 @@ const products = [
         genre: 'Rock',
         stock: 2,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 15,
@@ -134,7 +134,7 @@ const products = [
         genre: 'Hip Hop',
         stock: 5,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 16,
@@ -143,7 +143,7 @@ const products = [
         genre: 'Rock',
         stock: 16,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 17,
@@ -152,7 +152,7 @@ const products = [
         genre: 'Country',
         stock: 12,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 18,
@@ -161,7 +161,7 @@ const products = [
         genre: 'Rock',
         stock: 20,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 19,
@@ -170,7 +170,7 @@ const products = [
         genre: 'Rock',
         stock: 1,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
     {
         id: 20,
@@ -179,14 +179,22 @@ const products = [
         genre: 'Rock',
         stock: 5,
         price: 1500,
-        img: './assets/img/disco.png',
+        img: '/assets/img/disco.png',
     },
 ];
 
 const getData = () => {
-    return new Promise( (resolve, reject) => {
-        setTimeout( () => { resolve(products) }, 1600 );
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {resolve(products)}, 1600);
     } );
+}
+
+export const getItemDetails = (itemUrl) => {
+    return new Promise((resolve, reject) => { 
+        const itemDetails = products.find((item) => item.id === parseInt(itemUrl));
+        setTimeout(() => {resolve(itemDetails);
+        console.log(itemDetails)}, 800);
+    });
 }
 
 export default getData;

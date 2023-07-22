@@ -8,10 +8,10 @@ const NavBar = () => {
             <ul>
                 <li id="navbar-brand"><Link to="/">BLACKDISCO</Link></li>
                 <li><Link to="/">Discos</Link></li>
-                <li><Link to="/products">Productos</Link></li>
-                <li><Link to="#">Nosotros</Link></li>
-                <li><Link to="#">Contacto</Link></li>
-                <li><Link to="/cart"><CartWidget /></Link></li>
+                <li><Link to="/product/1">Detalles</Link></li>
+                <li><Link to="/us">Nosotros</Link></li>
+                <li><Link to="/contact">Contacto</Link></li>
+                <li><Link to="/cart"><CartWidget /></Link></li>                
             </ul>
         </nav>
     );
