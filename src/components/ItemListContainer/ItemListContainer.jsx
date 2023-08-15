@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import getData, { getGenreList } from '../../services/MockService'
+import getData, { getGenreList } from '../../Services/MockService';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 

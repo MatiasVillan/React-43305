@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { getItemDetails } from '../../services/MockService';
+
 import { useParams } from 'react-router-dom';
 import Card from '../Card/Card';
 import ItemDetail from './ItemDetail';
+import getData, { getGenreList, getItemDetails } from '../../Services/MockService';
 
 const ProcessItemDetails = (itemId) => {
     const [disc, setDisc] = useState(null);

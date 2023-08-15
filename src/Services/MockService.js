@@ -189,14 +189,14 @@ const getData = () => {
     } );
 }
 
-export const getItemDetails = (itemUrl) => {
+const getItemDetails = (itemUrl) => {
     return new Promise((resolve, reject) => { 
         const itemDetails = products.find((item) => item.id === parseInt(itemUrl));
         setTimeout(() => resolve(itemDetails), 800);
     });
 }
 
-export const getGenreList = (genreUrl) => {
+const getGenreList = (genreUrl) => {
     return new Promise((resolve, reject) => {
         const genreList = products.filter((item) => {
             console.log(item.genre.toLowerCase(), genreUrl.toLowerCase());
@@ -207,3 +207,4 @@ export const getGenreList = (genreUrl) => {
 }
 
 export default getData;
+export { getGenreList, getItemDetails };
