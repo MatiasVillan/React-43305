@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'; 
 import './Card.css';
+import ItemCounter from '../ItemCounter/ItemCounter';
 
 const Card = (props) => {
-    const { id, title, artist, genre, stock, price, img } = props;
+    const { id, title, artist, genre, stock, price, img, list, realStock, onConfirm } = props;
     const linkId = `/product/${id}`
     const linkGenre = `/genre/${genre}`
 
@@ -18,6 +19,16 @@ const Card = (props) => {
                 <Link to={linkGenre}><h3>{genre}</h3></Link>
                 <h4>$ {price}</h4>
             </div>
+            { ( list ) 
+            ? ( <Link to={linkId}><button className="purple-button">Ver</button></Link> )
+            : (
+                <div>
+                    <ItemCounter stock={8} onConfirm={onConfirm}  />
+                    <br />
+                    <br />
+                    <Link to="/"><button className="purple-button">Volver</button></Link> 
+                </div>
+            ) }
         </div>
     );
 }

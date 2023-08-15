@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Card from '../Card/Card';
 import ItemDetail from './ItemDetail';
 import getData, { getGenreList, getItemDetails } from '../../Services/MockService';
+import { cartContext } from '../../context/cartContext';
 
 const ProcessItemDetails = (itemId) => {
-    const [disc, setDisc] = useState(null);
+    const [ disc, setDisc ] = useState([]);
+    const [ isInCart, setIsInCart ] = useState(false);
+    const { addToCart, getItemInCart } = useContext(cartContext);
 
     const getDetails = async () => {
         const details = await getItemDetails(itemId);
@@ -15,9 +16,20 @@ const ProcessItemDetails = (itemId) => {
 
     useEffect(() => {
         getDetails();
-    }, [disc] );
+    }, [] );
 
-    return ItemDetail(disc);
+    const itemInCart = getItemInCart(itemId);
+    const realStock = isInCart 
+        ? disc.stock - itemInCart.count
+        : disc.stock; 
+
+    const handleAddToCart = (clicks) => {
+        addToCart(disc, clicks);
+        alert(`Agregaste ${clicks} al carrito.`);
+        setIsInCart(true);
+    }
+
+    return ItemDetail(disc, realStock, handleAddToCart);
 }
 
 const ItemDetailContainer = () => {

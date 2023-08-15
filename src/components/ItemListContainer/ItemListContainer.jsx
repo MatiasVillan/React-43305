@@ -16,7 +16,10 @@ const ItemListContainer = () => {
 
     useEffect( () => { setList(); }, [genreId] );
 
-    return ItemList(discs);
+    if ( discs.length > 0 )
+        return ItemList(discs);
+    else
+        return (<h1>Error 404, Página no encontrada.</h1>);
 }
   
 export default ItemListContainer;
