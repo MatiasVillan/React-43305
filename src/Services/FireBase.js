@@ -48,5 +48,18 @@ const getDisc = async (id) => {
         return null;
 }
 
+const makeOrder = async (order) => {
+    const colRef = collection(db, "orders");
+    const orderDone = await addDoc (colRef, order);
 
-export { getAllDiscs, getGenre, getDisc };
+    return orderDone.id;
+}
+
+const getOrder = async (id) => {
+    const docRef = doc(db, "orders", id);
+    const snapShot = await getDoc(docRef);
+
+    return {...snapShot.data(), id: snapShot.id};
+}
+
+export { getAllDiscs, getGenre, getDisc, makeOrder, getOrder };
