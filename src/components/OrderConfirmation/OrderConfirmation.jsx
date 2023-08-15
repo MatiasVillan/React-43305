@@ -25,7 +25,8 @@ const OrderConfirmation = () => {
                         {order.items.map( (item) => {
                             return (
                                 <small>
-                                    {item.title} - {item.artist} x {item.count}  
+                                    {item.title} - {item.artist} x {item.count}
+                                    <br />
                                 </small>
                             )
                         } )}
