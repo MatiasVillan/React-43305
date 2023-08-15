@@ -3,7 +3,7 @@ import './Card.css';
 import ItemCounter from '../ItemCounter/ItemCounter';
 
 const Card = (props) => {
-    const { id, title, artist, genre, stock, price, img, list, realStock, onConfirm } = props;
+    const { id, title, artist, genre, stock, price, img, list, realStock, handleAddToCart } = props;
     const linkId = `/product/${id}`
     const linkGenre = `/genre/${genre}`
 
@@ -23,7 +23,7 @@ const Card = (props) => {
             ? ( <Link to={linkId}><button className="purple-button">Ver</button></Link> )
             : (
                 <div>
-                    <ItemCounter stock={8} onConfirm={onConfirm}  />
+                    <ItemCounter stock={realStock} maxStock={stock} handleAddToCart={handleAddToCart}/>
                     <br />
                     <br />
                     <Link to="/"><button className="purple-button">Volver</button></Link> 

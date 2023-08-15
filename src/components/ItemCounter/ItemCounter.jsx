@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./ItemCounter.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart }  from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart, faSortNumericDownAlt }  from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const ItemCounter = (props) => {
     const [ clicks, setClicks ] = useState(1);
-    const { stock, onConfirm } = props;
+    const { stock, maxStock, handleAddToCart } = props;
 
     const handleAddClick = () => {
         if ( clicks < stock )
@@ -31,9 +32,15 @@ const ItemCounter = (props) => {
                 > + </button>
             </div>
             <button className="item-count-button"
-                onClick={onConfirm}
-                disabled={stock === 0}
-            > <h3> Meter en el <FontAwesomeIcon icon={ faShoppingCart } /> </h3> </button>
+                onClick={ () => handleAddToCart(clicks) }
+                disabled={ stock === 0 || clicks > stock }
+                > <h3> Meter en el <FontAwesomeIcon icon={ faShoppingCart } /> 
+            </h3> </button>
+            <Link to="/cart"><button className="item-cart-button"> <h3> Ir al <FontAwesomeIcon icon={ faShoppingCart } /> </h3> </button></Link>
+            <div>
+                <h4>Tenés {maxStock - stock} de este artículo en el carrito.</h4>
+                <small>Stock disponible: {maxStock}</small>
+            </div>
         </>
     )
 }

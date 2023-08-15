@@ -8,7 +8,7 @@ const products = [
         genre: 'Pop',
         stock: 5,
         price: 1000,
-        img: '/assets/img/disco.png',
+        img: '/assets/img/thriller.webp',
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const products = [
         genre: 'Rock',
         stock: 10,
         price: 1000,
-        img: '/assets/img/disco.png',
+        img: '/assets/img/backinblack.jpg',
     },
     {
         id: 3,
@@ -89,7 +89,7 @@ const products = [
         genre: 'Progressive',
         stock:  11,
         price: 1000,
-        img: '/assets/img/disco.png',
+        img: '/assets/img/thewall.jpg',
     },
     {
         id: 11,
