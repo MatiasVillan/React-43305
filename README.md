@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Proyecto Ecommerce BLACK DISK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Muchas gracias por ingresar a mi proyecto. 
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Este ecommerse fue desarrollado durante el curso de React comisión 43305 y presentado como proyecto final. El objetivo del mismo fue proporcionar una plataforma práctica para aplicar conceptos de JavaScript y React tales como componentes, JSX, estados, props, hooks, métodos de ciclo de vida, componentes funcinales, API Context, rendereado condicional, manejo de eventos, etc.
 
-### `npm start`
+## Como Ejecutarlo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para poder ejecutar localmente este proyecto se debe contar con instalaciones NPM, NODE.JS y GIT para su sistema operativo. El procedimiento para completar dichas instalaciones excede el alcance de este documento.
+Si se cumplen estos requerimientos se debe ejecutar los siguiente en su terminal.
 
-### `npm test`
+```
+git clone https://github.com/MatiasVillan/React-43305.git
+npm install
+npm start
+```
+Esto realizara una copia local del repositorio, instalara todas las dependencias necesarias, y ejecutará a la aplicacion en un servicio local para poder ser consumida desde cualquier navegador web.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Alternativas
 
-### `npm run build`
+Este proyecto también cuenta con una implementacion online a la cual se puede acceder a través del enlace:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [Vercel-BlackDisk](https://https://react-43305.vercel.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Agradecimientos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Coderhouse](https://www.coderhouse.com/)
