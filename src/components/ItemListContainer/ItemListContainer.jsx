@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
-import getData, { getGenreList } from '../../Services/MockService';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import { Blocks } from 'react-loader-spinner'
+import { getAllDiscs, getGenre } from '../../Services/FireBase';
 
 const ItemListContainer = () => {
     const [ discs, setDiscs ] = useState([]);
     const { genreId } = useParams();
     const [ loading, setLoading ] = useState(true);
-
+    
     const setList = async () => {
         let discList = genreId
-        ? await getGenreList(genreId)
-        : await getData();
+        ? await getGenre(genreId)
+        : await getAllDiscs();
         setDiscs(discList);
         setLoading(false);
     }

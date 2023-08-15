@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
  
 const products = [
     {
@@ -207,4 +207,4 @@ const getGenreList = (genreUrl) => {
 }
 
 export default getData;
-export { getGenreList, getItemDetails };
+export { getGenreList, getItemDetails }; */

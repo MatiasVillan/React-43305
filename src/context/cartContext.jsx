@@ -11,8 +11,6 @@ const CartContextProvider = (props) => {
     }
 
     const getItemInCart = (id) => {
-        console.log("item in cart ", id, cart)
-        console.log("LOOK HERE", cart.find( (item) => item.id == id ));
         return cart.find( (item) => item.id == id );
     }
 
