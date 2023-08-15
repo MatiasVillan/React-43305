@@ -174,12 +174,12 @@ const products = [
     },
     {
         id: 20,
-        title: 'Appetite for Destruction',
-        artist: 'Guns N\' Roses',
+        title: 'Oktubre',
+        artist: 'Patricio Rey y sus Redonditos de Ricota',
         genre: 'Rock',
         stock: 5,
         price: 1500,
-        img: '/assets/img/disco.png',
+        img: '/assets/img/oktubre.jpg',
     },
 ];
 

@@ -1,8 +1,10 @@
 import React from "react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const Cart = ( props ) => {
 
-   const { cart, remover, price } =  props;
+   const { cart, remover, price, cleaner } =  props;
 
    return (
       <div>
@@ -13,7 +15,13 @@ const Cart = ( props ) => {
                   <div key={item.id}>
                      <h2> {item.title} </h2>
                      <p> {item.count} unidades x ${item.price} = ${item.count * item.price}</p>
-                     <button onClick={ () => remover(item.id) }>Quitar</button>
+                     <button onClick={ () => { remover(item.id) 
+                     Swal.fire({
+                        icon: 'info',
+                        title: 'OK!',
+                        text: 'Has quitado los productos del carrito!',
+                      })
+                     } }>Quitar</button>
                   </div>               
                   <br />
                </div> 
@@ -21,9 +29,20 @@ const Cart = ( props ) => {
             : <h2>Tu Carrito esta vacío</h2>}
             <div>
                { price
-                  ? <small>Total de la compra: ${price}</small>
+                  ? <div>
+                  <small>Total de la compra: ${price}</small>
+                  <br />
+                  <button onClick={ () => { cleaner() 
+                     Swal.fire({
+                        icon: 'info',
+                        title: 'SI!',
+                        text: 'Se ha vaciado el carrito!',
+                      })
+                     } }>Vaciar el carrito</button>
+                     </div>
                   : null  }
             </div>
+            
                   
       </div>
    );

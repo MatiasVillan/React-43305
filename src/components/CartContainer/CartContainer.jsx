@@ -4,11 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import Cart from "./Cart";
 
 const CartContainer = () => {
-    const { cart, removeItem, getTotalPrice } = useContext(cartContext);
+    const { cart, removeItem, getTotalPrice, clearCart } = useContext(cartContext);
 
     const price = getTotalPrice();
 
-    return <Cart cart={cart} remover={removeItem} price={price} />;
+    return <Cart cart={cart} remover={removeItem} price={price} cleaner={clearCart}/>;
 }
 
 export default CartContainer;

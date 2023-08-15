@@ -4,6 +4,8 @@ import ItemDetail from './ItemDetail';
 import getData, { getGenreList, getItemDetails } from '../../Services/MockService';
 import { cartContext } from '../../context/cartContext';
 import { Blocks } from 'react-loader-spinner'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const ItemDetailContainer = () => {
     const {itemId} = useParams();
@@ -11,6 +13,7 @@ const ItemDetailContainer = () => {
     const [ isInCart, setIsInCart ] = useState(false);
     const { addToCart, getItemInCart } = useContext(cartContext);
     const [ loadingDetails, setLoadingDetails ] = useState(true);
+    const MySwal = withReactContent(Swal)
 
     const getDetails = async () => {
         const details = await getItemDetails(itemId);
@@ -35,7 +38,11 @@ const ItemDetailContainer = () => {
 
     const handleAddToCart = (clicks) => {
         addToCart(disc, clicks);
-        alert(`Agregaste ${clicks} al carrito.`);
+        MySwal.fire({
+            title: <strong>Bien ahi!</strong>,
+            html: <i>Agregaste {clicks} discos al carrito!</i>,
+            icon: 'success'
+          })
         setIsInCart(true);
     }
 
