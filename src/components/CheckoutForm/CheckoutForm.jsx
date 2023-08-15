@@ -4,6 +4,7 @@ import { cartContext } from "../../context/cartContext";
 import { makeOrder } from "../../Services/FireBase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import './CheckoutForm.css'
 
 const CheckoutForm = () => {
     const blank = {
@@ -62,9 +63,9 @@ const CheckoutForm = () => {
     }
     
     return (
-        <form>
+        <form className="form-container">
             <h2>Completa tu info!</h2>
-            <div>
+            <div className="form-field">
                 <label htmlFor="name"> Nombre Completo: </label>
                 <input 
                     type="text"
@@ -73,7 +74,7 @@ const CheckoutForm = () => {
                     onChange={onInput}
                 />
             </div>
-            <div>
+            <div className="form-field">
                 <label htmlFor="email"> email: </label>
                 <input 
                     type="email"
@@ -82,7 +83,7 @@ const CheckoutForm = () => {
                     onChange={onInput}
                 />
             </div>
-            <div>
+            <div className="form-field">
                 <label htmlFor="adress"> Direccion: </label>
                 <input 
                     type="text"
@@ -91,9 +92,10 @@ const CheckoutForm = () => {
                     onChange={onInput}
                 />
             </div>
-
-            <button disabled={ !(customer.name !== "" && customer.email !== "" && customer.adress !== "") } onClick={handleCheckout}> Confirmar Compra! </button>
-            <button onClick={resetForm}>Cancelar</button>
+            <div className="form-buttons">
+                <button className="accept-button" disabled={ !(customer.name !== "" && customer.email !== "" && customer.adress !== "") } onClick={handleCheckout}> Confirmar Compra! </button>
+                <button onClick={resetForm}>Cancelar</button>
+            </div>
 
         </form>
     );
