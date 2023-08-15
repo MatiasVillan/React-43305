@@ -18,7 +18,7 @@ git clone https://github.com/MatiasVillan/React-43305.git
 npm install
 npm start
 ```
-Esto realizara una copia local del repositorio, instalara todas las dependencias necesarias, y ejecutará a la aplicacion en un servicio local para poder ser consumida desde cualquier navegador web.
+Esto realizará una copia local del repositorio, instalará todas las dependencias necesarias, y ejecutará a la aplicacion en un servicio local para poder ser consumida desde cualquier navegador web.
 
 ## Alternativas
 
